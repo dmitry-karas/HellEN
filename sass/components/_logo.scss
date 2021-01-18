@@ -1,0 +1,33 @@
+.logo {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 128px;
+
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  color: var(--primary-title-color);
+}
+
+.logo__icon {
+  margin-right: 3px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.logo__undertitle {
+  display: flex;
+
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+
+  &--accent {
+    color: var(--accent-color);
+  }
+}

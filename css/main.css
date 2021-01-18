@@ -6,6 +6,14 @@
   --secondary-text-color: #3d3d3d;
 }
 
+* {
+  outline: 1px solid red;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -34,5 +42,43 @@ img {
 
 textarea {
   resize: none;
+}
+
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 128px;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  color: var(--primary-title-color);
+}
+
+.logo__icon {
+  margin-right: 3px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.logo__undertitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+}
+
+.logo__undertitle--accent {
+  color: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */
