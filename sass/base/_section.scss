@@ -1,0 +1,11 @@
+.section {
+  @media screen and (max-width: 1313px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include desktop-only {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}

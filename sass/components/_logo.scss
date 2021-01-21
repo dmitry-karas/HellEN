@@ -1,31 +1,64 @@
 .logo {
+  z-index: 1;
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
   width: 128px;
 
   font-weight: 800;
   font-size: 26px;
   line-height: 1.23;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--primary-title-color);
+
+  @media screen and (max-width: 767px) {
+    flex-basis: 80px;
+    font-size: 16px;
+    // letter-spacing: 0.02em;
+  }
+
+  &--dark-theme {
+    color: var(--secondary-title-color);
+  }
 }
 
 .logo__icon {
   margin-right: 3px;
   margin-bottom: 5px;
   margin-left: 3px;
+
+  @media screen and (max-width: 767px) {
+    width: 14px;
+    height: 20px;
+    margin-bottom: 3px;
+  }
 }
 
 .logo__undertitle {
-  display: flex;
-
   font-weight: 700;
-  font-size: 8px;
   line-height: 1.25;
   letter-spacing: 0.18em;
+
   text-transform: uppercase;
   color: var(--primary-title-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 5px;
+    // line-height: 1.15;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+
+  .logo--dark-theme & {
+    color: var(--secondary-title-color);
+
+    &--accent {
+      color: var(--accent-color);
+    }
+  }
 
   &--accent {
     color: var(--accent-color);

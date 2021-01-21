@@ -1,0 +1,43 @@
+.menu-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include desktop-only {
+    display: none;
+  }
+
+  &.is-open {
+    position: absolute;
+    right: 20px;
+
+    transform: scale(1);
+
+    transition: transform 250ms var(--timing-function);
+
+    &:hover {
+      transform: scale(1.4);
+    }
+
+    @include tablet-only {
+      right: 40px;
+    }
+  }
+}
+
+.menu-button__icon-menu {
+  display: block;
+
+  .menu-button.is-open & {
+    display: none;
+  }
+}
+
+.menu-button__icon-close {
+  display: none;
+
+  .menu-button.is-open & {
+    display: block;
+  }
+}
