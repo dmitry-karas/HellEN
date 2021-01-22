@@ -190,6 +190,7 @@ img {
 .header__menu.is-open {
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 
 .hero {
@@ -352,6 +353,7 @@ img {
 
 .logo--dark-theme {
   color: var(--secondary-title-color);
+  z-index: 2;
 }
 
 .logo__icon {
@@ -601,6 +603,7 @@ img {
 .button-burger.is-open {
   position: absolute;
   right: 20px;
+  z-index: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 250ms var(--timing-function);

@@ -12,6 +12,7 @@
   &.is-open {
     position: absolute;
     right: 20px;
+    z-index: 1;
 
     transform: scale(1);
 
