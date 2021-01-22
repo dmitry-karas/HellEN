@@ -14,7 +14,7 @@
   }
 
   @include desktop-only {
-    max-width: 1314px;
+    max-width: 1344px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -27,5 +27,9 @@
     @include mobile-only {
       justify-content: space-between;
     }
+  }
+
+  .hero & {
+    position: relative;
   }
 }

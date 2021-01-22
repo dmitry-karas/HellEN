@@ -1,5 +1,7 @@
 .button {
+  outline-offset: 3px;
   border: 2px solid var(--accent-color);
+  border-radius: 0;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -8,7 +10,7 @@
   transition: color 250ms var(--timing-function),
     background-color 250ms var(--timing-function);
 
-  @media screen and (max-width: 1313px) {
+  @media screen and (max-width: 1343px) {
     width: 260px;
     padding: 14px 0;
 
@@ -20,7 +22,6 @@
   @include desktop-only {
     width: 336px;
     padding: 26px 0;
-    margin-left: 60px;
 
     font-size: 14px;
     line-height: 1.21;
@@ -32,9 +33,20 @@
     color: var(--secondary-title-color);
     background-color: var(--accent-color);
   }
+
+  &--reverse {
+    color: var(--secondary-title-color);
+    background-color: var(--accent-color);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      background-color: var(--secondary-title-color);
+    }
+  }
 }
 
-.button__menu {
+.button-menu {
   display: none;
 
   @include mobile-only {
@@ -45,7 +57,7 @@
   }
 }
 
-.button__header {
+.button-header {
   display: none;
 
   @include tablet-only {
@@ -56,8 +68,22 @@
   @media screen and (min-width: 768px) {
     display: block;
   }
+
+  @include desktop-only {
+    margin-left: 60px;
+  }
 }
 
-.menu-button {
-  margin-left: 40px;
+.button-hero {
+  @include mobile-only {
+    margin-bottom: 40px;
+  }
+
+  @include tablet-only {
+    margin-bottom: 142px;
+  }
+
+  @include desktop-only {
+    margin-bottom: 241px;
+  }
 }

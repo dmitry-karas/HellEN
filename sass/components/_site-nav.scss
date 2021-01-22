@@ -2,7 +2,7 @@
   visibility: hidden;
   opacity: 0;
 
-  @media screen and (max-width: 1313px) {
+  @media screen and (max-width: 1343px) {
     margin-right: auto;
     margin-bottom: 50px;
     margin-left: auto;
@@ -43,8 +43,10 @@
 }
 
 .site-nav__item {
-  &:not(:last-child) {
-    margin-right: 40px;
+  @include desktop-only {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }
 
@@ -53,7 +55,7 @@
 
   transition: color 250ms var(--timing-function);
 
-  @media screen and (max-width: 1313px) {
+  @media screen and (max-width: 1343px) {
     font-weight: 800;
     font-size: 20px;
     line-height: 1.8;

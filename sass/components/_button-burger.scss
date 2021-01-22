@@ -1,4 +1,5 @@
-.menu-button {
+.button-burger {
+  margin-left: 40px;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -26,18 +27,18 @@
   }
 }
 
-.menu-button__icon-menu {
+.button-burger__icon-burger {
   display: block;
 
-  .menu-button.is-open & {
+  .button-burger.is-open & {
     display: none;
   }
 }
 
-.menu-button__icon-close {
+.button-burger__icon-close {
   display: none;
 
-  .menu-button.is-open & {
+  .button-burger.is-open & {
     display: block;
   }
 }
