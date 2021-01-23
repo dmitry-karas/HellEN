@@ -451,6 +451,10 @@ img {
   .problems {
     height: 560px;
     padding-top: 100px;
+    background-image: url(../images/problems/problems-bg-campfire.svg);
+    background-position-x: 103%;
+    background-position-y: 88px;
+    background-repeat: no-repeat;
   }
 }
 
