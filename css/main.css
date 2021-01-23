@@ -217,8 +217,8 @@ img {
   .hero {
     overflow: hidden;
     background-image: url(../images/hero/hero-bg-desk.png);
-    background-position-y: -230px;
-    background-position-x: -100px;
+    background-position-y: -270px;
+    background-position-x: -130px;
   }
 }
 
@@ -326,9 +326,19 @@ img {
   }
 }
 
-.hero__features-list {
-  max-width: 216px;
-  margin: 0 auto;
+@media screen and (max-width: 767px) {
+  .hero__features-list {
+    max-width: 216px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero__features-item {
@@ -337,8 +347,27 @@ img {
   display: flex;
 }
 
-.hero__features-item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .hero__features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .hero__features-item {
+    width: 216px;
+  }
+  .hero__features-item:not(:last-child) {
+    margin-right: 21px;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .hero__features-item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .hero__features-icon {
@@ -349,24 +378,54 @@ img {
   border: 2px solid #ff6b09;
 }
 
+@media screen and (min-width: 1344px) {
+  .hero__features-icon {
+    width: 100px;
+    height: 102px;
+    padding: 27px 24px;
+  }
+}
+
 .hero__features-text {
   position: relative;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.43;
   letter-spacing: 0.08em;
   color: var(--primary-title-color);
+}
+
+@media screen and (max-width: 1343px) {
+  .hero__features-text {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .hero__features-text {
+    width: 366px;
+    font-size: 20px;
+    line-height: 1.65;
+    background-color: var(--primary-bg-color);
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
 }
 
 .hero__features-text::before {
   content: "";
   display: block;
   position: absolute;
-  top: 9px;
+  top: 8px;
   left: -12px;
   width: 2px;
   height: 44px;
   background-color: var(--primary-bg-color);
+}
+
+@media screen and (min-width: 1344px) {
+  .hero__features-text::before {
+    display: none;
+  }
 }
 
 .logo {
