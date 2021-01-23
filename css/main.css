@@ -4,6 +4,9 @@
   --secondary-title-color: #fff;
   --primary-text-color: #b9b9b9;
   --secondary-text-color: #3d3d3d;
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #111518;
+  --tertiary-bg-color: #f1f1f1;
   --timing-function: ease-in-out;
 }
 
@@ -17,10 +20,6 @@
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
-}
-
-* {
-  outline: 1px solid red;
 }
 
 body {
@@ -201,13 +200,15 @@ img {
 @media screen and (max-width: 767px) {
   .hero {
     background-image: url(../images/hero/hero-bg-mob.png);
-    background-position-y: -120px;
+    background-position-x: -110px;
+    background-position-y: -240px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1343px) {
   .hero {
     background-image: url(../images/hero/hero-bg-tab.png);
+    background-position-x: -40px;
     background-position-y: -100px;
   }
 }
@@ -217,7 +218,7 @@ img {
     overflow: hidden;
     background-image: url(../images/hero/hero-bg-desk.png);
     background-position-y: -230px;
-    background-position-x: -30px;
+    background-position-x: -100px;
   }
 }
 
@@ -323,6 +324,49 @@ img {
     top: -79px;
     right: -120px;
   }
+}
+
+.hero__features-list {
+  max-width: 216px;
+  margin: 0 auto;
+}
+
+.hero__features-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__features-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.hero__features-icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 10px 13px;
+  margin-right: 10px;
+  border: 2px solid #ff6b09;
+}
+
+.hero__features-text {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  color: var(--primary-title-color);
+}
+
+.hero__features-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: -12px;
+  width: 2px;
+  height: 44px;
+  background-color: var(--primary-bg-color);
 }
 
 .logo {
@@ -491,6 +535,7 @@ img {
   outline-offset: 3px;
   border: 2px solid var(--accent-color);
   border-radius: 0;
+  cursor: pointer;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent-color);

@@ -5,11 +5,13 @@
 
   @include mobile-only {
     background-image: url(../images/hero/hero-bg-mob.png);
-    background-position-y: -120px;
+    background-position-x: -110px;
+    background-position-y: -240px;
   }
 
   @include tablet-only {
     background-image: url(../images/hero/hero-bg-tab.png);
+    background-position-x: -40px;
     background-position-y: -100px;
   }
 
@@ -18,7 +20,7 @@
 
     background-image: url(../images/hero/hero-bg-desk.png);
     background-position-y: -230px;
-    background-position-x: -30px;
+    background-position-x: -100px;
   }
 }
 
@@ -110,5 +112,44 @@
   @include desktop-only {
     top: -79px;
     right: -120px;
+  }
+}
+
+.hero__features-list {
+  max-width: 216px;
+  margin: 0 auto;
+}
+
+.hero__features-item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.hero__features-icon {
+  flex-shrink: 0;
+  padding: 10px 13px;
+  margin-right: 10px;
+  border: 2px solid #ff6b09;
+}
+
+.hero__features-text {
+  position: relative;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+
+  color: var(--primary-title-color);
+  &::before {
+    @include pseudo;
+    top: 9px;
+    left: -12px;
+    width: 2px;
+    height: 44px;
+    background-color: var(--primary-bg-color);
   }
 }
