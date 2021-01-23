@@ -430,19 +430,76 @@ img {
 
 .problems {
   position: relative;
-  height: 545px;
   background-color: var(--secondary-bg-color);
+}
+
+@media screen and (max-width: 767px) {
+  .problems {
+    height: 545px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .problems {
+    height: 340px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .problems {
+    height: 560px;
+    padding-top: 100px;
+  }
+}
+
+.problems__title {
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--secondary-title-color);
+}
+
+@media screen and (max-width: 767px) {
+  .problems__title {
+    font-size: 20px;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .problems__title {
+    width: 460px;
+    font-size: 26px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .problems__title {
+    width: 800px;
+    font-size: 46px;
+    line-height: 1.3;
+  }
+}
+
+.problems__title--line:last-child {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .problems__title--line {
+    display: block;
+  }
+}
+
+.problems__title--accent {
+  color: var(--accent-color);
 }
 
 .problems__list {
   position: absolute;
-  top: 205px;
   left: 50%;
-  width: 280px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
   background-color: var(--primary-bg-color);
   -webkit-box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
           box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
@@ -450,40 +507,111 @@ img {
           transform: translateX(-50%);
 }
 
-.problems__item:not(:last-child) {
-  margin-bottom: 10px;
+@media screen and (max-width: 767px) {
+  .problems__list {
+    top: 205px;
+    width: 280px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
 }
 
-.problems__title {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.36;
-  letter-spacing: 0.03em;
-  color: var(--secondary-title-color);
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .problems__list {
+    top: 188px;
+    width: 688px;
+    padding-top: 30px;
+    padding-right: 96px;
+    padding-left: 96px;
+    padding-bottom: 24px;
+  }
 }
 
-.problems__title--line {
-  display: block;
+@media screen and (min-width: 768px) {
+  .problems__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.problems__title--accent {
-  color: var(--accent-color);
+@media screen and (min-width: 1344px) {
+  .problems__list {
+    top: 348px;
+    width: 1314px;
+    padding-top: 70px;
+    padding-right: 114px;
+    padding-bottom: 70px;
+    padding-left: 114px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .problems__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .problems__item {
+    width: calc((100% - 24px) / 2);
+  }
+  .problems__item:nth-child(odd) {
+    margin-right: 24px;
+  }
+  .problems__item:nth-child(-n + 4) {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .problems__item {
+    width: calc((100% - 2 * 40px) / 3);
+  }
+  .problems__item:not(:nth-child(3n)) {
+    margin-right: 40px;
+  }
+  .problems__item:nth-child(-n + 3) {
+    margin-bottom: 32px;
+  }
 }
 
 .problems__text {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.08em;
   color: var(--primary-title-color);
+}
+
+@media screen and (max-width: 1343px) {
+  .problems__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .problems__text {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #111518;
+  }
 }
 
 .problems__text--accent {
   display: block;
   margin-bottom: 5px;
-  font-size: 20px;
-  line-height: 24px;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1344px) {
+  .problems__text--accent {
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
 }
 
 .logo {
