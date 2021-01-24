@@ -152,7 +152,8 @@
   flex-shrink: 0;
   padding: 10px 13px;
   margin-right: 10px;
-  border: 2px solid #ff6b09;
+  border: 2px solid var(--accent-color);
+  fill: var(--accent-color);
 
   @include desktop-only {
     width: 100px;
