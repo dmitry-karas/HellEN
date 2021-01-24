@@ -5,4 +5,11 @@
   line-height: 1.65;
   letter-spacing: 0.08em;
   color: var(--accent-color);
+
+  .features & {
+    @include tablet-only {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
 }
