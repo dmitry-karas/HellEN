@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  // outline: 1px solid red;
 }
 
 body {
@@ -8,6 +8,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -31,4 +32,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
 }

@@ -6,10 +6,17 @@
   letter-spacing: 0.08em;
   color: var(--accent-color);
 
+  transition: color 250ms var(--timing-function);
+
   .features & {
     @include tablet-only {
       padding-top: 10px;
       padding-bottom: 10px;
     }
+  }
+
+  .features__link:hover &,
+  .features__link:focus & {
+    color: #fff;
   }
 }
